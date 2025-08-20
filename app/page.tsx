@@ -6,10 +6,10 @@ const frame = {
   version: 'next',
   imageUrl: `${APP_URL}/images/feed.png`,
   button: {
-    title: 'Launch Template',
+    title: 'Slot Machine',
     action: {
       type: 'launch_frame',
-      name: 'Monad Farcaster MiniApp Template',
+      name: 'Slot Machine Game',
       url: APP_URL,
       splashImageUrl: `${APP_URL}/images/splash.png`,
       splashBackgroundColor: '#f7f7f7',
@@ -19,10 +19,10 @@ const frame = {
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Monad Farcaster MiniApp Template',
+    title: 'Slot Machine Game',
     openGraph: {
-      title: 'Monad Farcaster MiniApp Template',
-      description: 'A template for building mini-apps on Farcaster and Monad',
+      title: 'Slot Machine Game',
+      description: 'A slot machine game on Farcaster and Monad',
     },
     other: {
       'fc:frame': JSON.stringify(frame),
