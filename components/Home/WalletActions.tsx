@@ -44,8 +44,8 @@ export function WalletActions() {
               </span>
             </p>
             {chainId === monadTestnet.id ? (
-              <div className="flex flex-col space-y-2 border border-[#333] p-4 rounded-md">
-                <h2 className="text-lg font-semibold text-left">
+              <div className="flex flex-col space-y-2 p-4 rounded-md">
+                {/* <h2 className="text-lg font-semibold text-left">
                   Send Transaction Example
                 </h2>
                 <button
@@ -54,8 +54,8 @@ export function WalletActions() {
                   onClick={sendTransactionHandler}
                 >
                   Send Transaction
-                </button>
-                {hash && (
+                </button> */}
+                {/* {hash && (
                   <button
                     type="button"
                     className="bg-white text-black rounded-md p-2 text-sm"
@@ -68,7 +68,7 @@ export function WalletActions() {
                   >
                     View Transaction
                   </button>
-                )}
+                )} */}
               </div>
             ) : (
               <button

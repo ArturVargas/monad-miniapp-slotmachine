@@ -157,7 +157,7 @@ export function SlotMachineActions() {
       
       // Cantidad de USDC para el spin
       const spinAmount = parseUnits(betAmount, decimals || 6)
-      
+
       // Verificar si tiene allowance suficiente
       const hasAllowance = allowance && allowance >= spinAmount
       
@@ -171,10 +171,10 @@ export function SlotMachineActions() {
       setStatus('Enviando spin...')
       
       writeSlotMachineContract({
-        address: "0xe42682B8162C53BA089833b7ba8f843C05C6DE1E",
+        address: SLOT_MACHINE_CONTRACT_ADDRESS,
         abi: SLOT_MACHINE_ABI,
         functionName: 'spinWithUSDC',
-        args: [BigInt("1900000")],
+        args: [spinAmount],
       })
       
     } catch (error) {
@@ -308,7 +308,7 @@ export function SlotMachineActions() {
               type="button"
               className="bg-green-500 text-white rounded-md p-2 text-sm disabled:opacity-50"
               onClick={spinWithUSDCHandler}
-              disabled={isSlotMachineWritePending || isSpinLoading || !isValidBet || !allowance || allowance < parseUnits(betAmount, decimals || 6)}
+              disabled={isSlotMachineWritePending || isSpinLoading || !isValidBet}
             >
               {isSlotMachineWritePending || isSpinLoading ? 'Procesando...' : `Spin con ${betAmount} USDC`}
             </button>
@@ -333,12 +333,12 @@ export function SlotMachineActions() {
             {/* Hashes de transacciones */}
             {approveHash && (
               <div className="text-xs text-gray-400">
-                Approve Hash: {approveHash}
+                Approve Hash: {approveHash.slice(0, 6)}...{approveHash.slice(-4)}
               </div>
             )}
             {spinHash && (
               <div className="text-xs text-gray-400">
-                Spin Hash: {spinHash}
+                Spin Hash: {spinHash.slice(0, 6)}...{spinHash.slice(-4)}
               </div>
             )}
             

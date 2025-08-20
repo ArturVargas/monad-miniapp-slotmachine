@@ -4,9 +4,9 @@ import { FarcasterActions } from '@/components/Home/FarcasterActions'
 import { User } from '@/components/Home/User'
 import { WalletActions } from '@/components/Home/WalletActions'
 import { SlotMachineActions } from '@/components/Home/SlotMachineActions'
-import { NotificationActions } from './NotificationActions'
-import CustomOGImageAction from './CustomOGImageAction'
-import { Haptics } from './Haptics'
+// import { NotificationActions } from './NotificationActions'
+// import CustomOGImageAction from './CustomOGImageAction'
+// import { Haptics } from './Haptics'
 
 export function Demo() {
   return (
@@ -16,12 +16,12 @@ export function Demo() {
       </h1>
       <div className="w-full max-w-4xl space-y-6">
         <User />
-        <FarcasterActions />
-        <NotificationActions />
+        {/* <FarcasterActions /> */}
+        {/* <NotificationActions /> */}
         <WalletActions />
         <SlotMachineActions />
-        <CustomOGImageAction />
-        <Haptics />
+        {/* <CustomOGImageAction /> */}
+        {/* <Haptics /> */}
       </div>
     </div>
   )

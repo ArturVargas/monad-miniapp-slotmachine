@@ -19,24 +19,24 @@ export function User() {
               />
             )}
             <div className="flex flex-col justify-start items-start space-y-2">
-              <p className="text-sm text-left">
+              {/* <p className="text-sm text-left">
                 user.displayName:{' '}
                 <span className="bg-white font-mono text-black rounded-md p-[4px]">
                   {context?.user?.displayName}
                 </span>
-              </p>
+              </p> */}
               <p className="text-sm text-left">
                 user.username:{' '}
                 <span className="bg-white font-mono text-black rounded-md p-[4px]">
                   {context?.user?.username}
                 </span>
               </p>
-              <p className="text-sm text-left">
+              {/* <p className="text-sm text-left">
                 user.fid:{' '}
                 <span className="bg-white font-mono text-black rounded-md p-[4px]">
                   {context?.user?.fid}
                 </span>
-              </p>
+              </p> */}
             </div>
           </>
         ) : (
